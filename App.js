@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { Settings, StyleSheet, Text, View } from 'react-native';
+import Settings from 'Screen /SettingsPage.js';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-
+        <Settings/>
       
     </View>
   );
