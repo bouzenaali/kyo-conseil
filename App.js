@@ -6,9 +6,8 @@ import SettingsList from './Components/Settings1';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Kyo assistant</Text>
+      <Text>  Settings </Text>
       <StatusBar style="auto" />
-      
       <SettingsList/>
     </View>
   );

@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 const SettingsItem = ({ icon, label, onPress }) => (
   <TouchableOpacity style={styles.item} onPress={onPress}>
-    <Ionicons name={icon} size={24} color="black" />
+    <Ionicons name={icon} size={24} color="#F62F53" />
     <Text style={styles.label}>{label}</Text>
   </TouchableOpacity>
 );
@@ -14,14 +14,16 @@ const SettingsItem = ({ icon, label, onPress }) => (
 const SettingsList = () => {
   return (
     <View style={styles.container}>
+        <Text style={styles.Text}>  Settings </Text>
         <View style={styles.itemContainer}>
-            <SettingsItem icon="ios-sunny" label="Appearance" onPress={() => {}} iconColor="#000000" />
+            <SettingsItem icon="ios-sunny" label="Appearance" onPress={() => {}}  />
+                
         </View>  
         <View style={styles.itemContainer}>
             <SettingsItem icon="ios-lock-closed" label="Privacy" onPress={() => {}} />
         </View>
         <View style={styles.itemContainer}>
-            <SettingsItem icon="ios-document-text" label="Terms of Service" onPress={() => {}} />
+            <SettingsItem  icon="ios-document-text" label="Terms of Service" onPress={() => {}} />
       </View>
       <View style={styles.itemContainer}>
             <SettingsItem icon="help-circle-outline" label="About Us" onPress={() => {}} />
@@ -48,6 +50,7 @@ const styles = StyleSheet.create({
     marginLeft: 16,
     fontSize: 16,
     fontWeight: 'regular',
+    color:'#1D252E',
   },
     itemContainer: {
       borderWidth: 1,
@@ -61,6 +64,13 @@ const styles = StyleSheet.create({
     },
     SettingsItem:{
         backgroundColor:'#ddd',
+    },
+    Text:{
+        fontFamily: 'Helvetica',
+        fontWeight: 'regular',
+        fontSize:20,
+        textAlign : 'left',
+        paddingBottom:12,
     },
 });
 
