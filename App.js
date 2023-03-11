@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Login from './screens/Login';
+import List from './components/List';
 
 export default function App() {
   return (
     <View style={styles.container}>
-       <Login/>
+       <List/>
     </View>
   );
 }

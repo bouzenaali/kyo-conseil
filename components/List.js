@@ -1,26 +1,30 @@
-import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import React from "react";
+import { ListItem } from "@react-native-material/core";
+import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 function List(props) {
   return (
     <View style={styles.listItem}>
-      
-      <View style={styles.listItemEmail}>
-        <MaterialIcons name="email" size={24} color="black" style={styles.emailIcon} />
-        <View style={styles.listItemTitle}>
-        <Text>{props.title}</Text>
+         <ListItem
+      title="Drafts"
+      leading={<Icon name="email-open" size={24} />}
+      trailing={props => <Icon name="chevron-right" {...props} />}
+    />
+    
+         <ListItem
+      title="Drafts"
+      leading={<Icon name="email-open" size={24} />}
+      trailing={props => <Icon name="chevron-right" {...props} />}
+    />
+    
+         <ListItem
+      title="Drafts"
+      leading={<Icon name="email-open" size={24} />}
+      trailing={props => <Icon name="chevron-right" {...props} />}
+    />
+     
       </View>
-      </View>
-      <View style={styles.listItemIcons}>
-        <TouchableOpacity onPress={() => props.onDelete(props.id)}>
-          <MaterialIcons name="delete" size={24} color="red" />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.onEdit(props.id)}>
-          <MaterialIcons name="edit" size={24} color="green" />
-        </TouchableOpacity>
-      </View>
-    </View>
+    
   );
 }
 
