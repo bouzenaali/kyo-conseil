@@ -7,9 +7,10 @@ const Home = () => {
 
 
   return (
-
+    <View Style={styles.page}>
+    <Sidebar />
     <View style={styles.container}>
-      <Sidebar />
+      
 
       <View style={styles.content}>
         <View style={styles.header}>
@@ -28,6 +29,7 @@ const Home = () => {
         </View>
       </View>   
     </View>
+    </View>
   );
 };
 
@@ -36,6 +38,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     flexDirection: 'row',
+    width:'100%'
   },
   header: {
     flexDirection: 'row',
@@ -55,7 +58,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: 20,
   },
-
+  page: {
+    flex:1,
+    flexDirection: 'row',
+    width:'50%'
+  }
 
 });
 export default Home;
