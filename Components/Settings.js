@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    paddingHorizontal: 16,
+    paddingHorizontal: 7,
     paddingTop:150, // we have to change it depending on the position of the other componenets
   },
   item: {

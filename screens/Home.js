@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import Sidebar from '../comps/Sidebar';
+import Sidebar from '/Users/cheimamezdour/kyoo-conseil/kyo-conseil/Components/Sidebar.js';
 
 const Home = () => {
 

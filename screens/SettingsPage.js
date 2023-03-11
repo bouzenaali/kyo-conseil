@@ -1,30 +1,36 @@
-import { SearchBar } from 'react-native-elements';
-import SettingsList from '/Users/cheimamezdour/kyoo-conseil/kyo-conseil/Components/Settings.js';
-import Sidebar from '/Users/cheimamezdour/kyoo-conseil/kyo-conseil/comps/Sidebar.js'
+import { StatusBar } from 'expo-status-bar';
+import {StyleSheet, Text, View } from 'react-native';
+import  Searchbar  from '/Users/cheimamezdour/kyoo-conseil/kyo-conseil/Components/Searchbar.js';
+import Settings from '/Users/cheimamezdour/kyoo-conseil/kyo-conseil/Components/Settings';
+import  Sidebar  from '/Users/cheimamezdour/kyoo-conseil/kyo-conseil/Components/Sidebar.js';
 
-const Settings = () => {
 
-    
-    return (
-
-        <view style={styles.container}>
-            <Sidebar />
-            <SearchBar />
-            <SettingsList />
-        </view>
-
-    );
-};
-
-export default Settings;
+const SettingsPage = () => {
+  return (
+    <View style={styles.container}>
+      <StatusBar style="auto" />
+          
+            <Sidebar/>
+            < Searchbar/>
+            <Settings/>
+            
+            
+           
+           
+     
+      
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'flex-start',
-        justifyContent: 'flex-start',
-        borderColor:'#1D252E',
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+   
+   
+  },
+});
 
-    }
-})
+export default SettingsPage;
