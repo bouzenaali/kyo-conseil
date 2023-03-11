@@ -3,6 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import VoiceComponent from './Components/voice';
 import SettingsList from './Components/Settings';
 import SpeechRecognitionPage from './Components/voice';
+
+
 export default function App() {
   return (
     <View style={styles.container}>
