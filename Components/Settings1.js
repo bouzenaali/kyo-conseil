@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import React, { useState }  from 'react';
+import { StyleSheet, View, Text, TouchableOpacity, Switch } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 
@@ -12,12 +12,14 @@ const SettingsItem = ({ icon, label, onPress }) => (
 );
 
 const SettingsList = () => {
+    const [isSwitchOn, setIsSwitchOn] = useState(false);
   return (
     <View style={styles.container}>
         <Text style={styles.Text}>  Settings </Text>
         <View style={styles.itemContainer}>
-            <SettingsItem icon="ios-sunny" label="Appearance" onPress={() => {}}  />
-                
+            <SettingsItem icon="ios-sunny" label="Appearance" onPress={() => {}}  >
+                <Switch value={isSwitchOn} onValueChange={setIsSwitchOn} />
+            </SettingsItem>
         </View>  
         <View style={styles.itemContainer}>
             <SettingsItem icon="ios-lock-closed" label="Privacy" onPress={() => {}} />
