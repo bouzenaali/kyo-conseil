@@ -12,14 +12,25 @@ const SettingsItem = ({ icon, label, onPress }) => (
 );
 
 const SettingsList = () => {
-    const [isSwitchOn, setIsSwitchOn] = useState(false);
+
+  const [isSwitchOn, setIsSwitchOn] = useState(false);
   return (
     <View style={styles.container}>
         <Text style={styles.Text}>  Settings </Text>
         <View style={styles.itemContainer}>
-            <SettingsItem icon="ios-sunny" label="Appearance" onPress={() => {}}  >
-                <Switch value={isSwitchOn} onValueChange={setIsSwitchOn} />
-            </SettingsItem>
+            <View style={styles.View}>
+                    <SettingsItem icon="ios-sunny" label="Appearance" onPress={() => {}}  />
+                    <Switch
+                    trackColor={{ false: "#ffffff", true: "#F62F53" }}
+                    thumbColor={isSwitchOn ? "#f4f3f4" : "#F62F53"}
+                    style={{ marginLeft: 100 }}
+                    ios_backgroundColor="#3e3e3e"
+                    onValueChange={setIsSwitchOn}
+                    value={isSwitchOn}
+                    />
+            </View>
+       
+           
         </View>  
         <View style={styles.itemContainer}>
             <SettingsItem icon="ios-lock-closed" label="Privacy" onPress={() => {}} />
@@ -74,6 +85,10 @@ const styles = StyleSheet.create({
         textAlign : 'left',
         paddingBottom:12,
     },
+    View : {
+        flexDirection:'row',
+        
+    }
 });
 
 export default SettingsList;
